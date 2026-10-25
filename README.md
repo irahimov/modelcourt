@@ -74,3 +74,16 @@ docs/             methodology and model documentation
 notebooks/        exploration only
 scripts/          one-command entry points
 ```
+
+## Roadmap
+
+| Phase | Content | Status |
+|-------|---------|--------|
+| 0 | Environment, skeleton, CI-free local tests | done |
+| 1 | Data description, thresholds, decision log | in progress |
+| 2 | M1 data quality, M2 discrimination | planned |
+| 3 | M3 calibration, M4 PSI (pandas and SQL) | planned |
+| 4 | M5 pseudo out-of-time, M6 challenger | planned |
+| 5 | M8 report, `run_all.sh`, final README numbers | planned |
+
+M7 (IFRS 9 ECL illustration) is out of scope for the first version. See `docs/future_work.md`.
