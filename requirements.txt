@@ -1,0 +1,14 @@
+# Versions are pinned after the first successful install on WSL:
+#   uv pip freeze > requirements.lock
+# Until then this file lists the direct dependencies only.
+pandas
+numpy
+scipy
+scikit-learn
+statsmodels
+duckdb
+matplotlib
+optbinning
+lightgbm
+python-docx
+jinja2

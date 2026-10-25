@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Data (downloaded or generated, never committed)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Models and secrets
+*.joblib
+*.pkl
+.env
+*.key
+
+# Editor and backup files
+.vscode/
+.idea/
+*.bak
+*.swp
