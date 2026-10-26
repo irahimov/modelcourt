@@ -57,3 +57,21 @@ Notes:
 - The 0.05 Brier skill cut-off is a working threshold chosen by the author, not a regulatory value.
 - A plain gap threshold (e.g. |mean PD - observed| < 0.02) was considered and rejected: the standard
   error of the observed rate on 300 rows is about 0.026, so such a threshold would reflect sampling noise.
+
+## M4: stability (training sample as development, holdout as new sample)
+
+| Test | Pass | Conditional | Fail | Severity if fail |
+|------|------|-------------|------|------------------|
+| PSI of the score (10 bins, edges from training sample) | < 0.10 | 0.10 to 0.25 | > 0.25 | high |
+| CSI per feature (same bins rule) | < 0.10 | 0.10 to 0.25 | > 0.25 | medium |
+| Count of features with CSI >= 0.10 | 0 | 1 to 2 | > 2 | medium |
+| pandas PSI vs SQL PSI, max absolute difference | < 1e-9 | - | >= 1e-9 | critical |
+| Positive control: credit_amount x1.5 on holdout, PSI | > 0.25 (detected) | - | <= 0.25 (not detected) | critical |
+
+Notes:
+- Bin edges come from the training sample only, computed once, and applied to the holdout.
+- Zero shares are replaced by 1e-4 so the logarithm is finite. Applied identically in pandas and SQL.
+- The training and holdout samples come from the same population, so low PSI here is a null result,
+  not evidence of stability over time. The positive control is what shows the method can see a shift.
+- A method whose positive control is not detected cannot support a pass on the real tests.
+- PSI bands 0.10 and 0.25 are industry practice, not regulatory requirements.
