@@ -1,0 +1,5 @@
+test_id,module,dataset,metric,value,threshold,decision,severity,note
+M4.score_psi,M4,german_credit_openml,psi_score,0.0285,"<0.10 pass, 0.10-0.25 conditional, >0.25 fail",pass,none,
+M4.csi,M4,german_credit_openml,features_csi_not_pass,0.0,"0 pass, 1-2 conditional, >2 fail",pass,none,worst feature: age (CSI=0.0641)
+M4.consistency,M4,german_credit_openml,max_abs_diff_pandas_vs_sql,6.939e-18,"<1e-9 pass, >=1e-9 fail",pass,none,
+M4.control,M4,german_credit_openml,psi_control_credit_amount_x1.5,0.3874,"detected (PSI>0.25) = pass, not detected = fail",pass,none,positive control: the method must see a known shift
