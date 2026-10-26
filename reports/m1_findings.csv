@@ -1,0 +1,87 @@
+test_id,module,dataset,metric,value,threshold,decision,severity,note
+M1.missing,M1,german_credit_openml,missing_pct:checking_status,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:duration,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:credit_history,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:purpose,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:credit_amount,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:savings_status,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:employment,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:installment_commitment,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:personal_status,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:other_parties,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:residence_since,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:property_magnitude,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:age,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:other_payment_plans,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:housing,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:existing_credits,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:job,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:num_dependents,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:own_telephone,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:foreign_worker,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.missing,M1,german_credit_openml,missing_pct:class,0.0,"<1 pass, 1-5 conditional, >5 fail",pass,none,
+M1.duplicates,M1,german_credit_openml,duplicate_rows,0.0,"0 pass, 1-10 conditional, >10 fail",pass,none,
+M1.categories,M1,german_credit_openml,unexpected_values:checking_status,0.0,"0 pass, 1-2 conditional, >2 fail",pass,none,
+M1.categories,M1,german_credit_openml,unexpected_values:credit_history,0.0,"0 pass, 1-2 conditional, >2 fail",pass,none,
+M1.categories,M1,german_credit_openml,unexpected_values:savings_status,0.0,"0 pass, 1-2 conditional, >2 fail",pass,none,
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:duration,0.629,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.257
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:credit_amount,0.555,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.110
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:installment_commitment,0.543,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.087
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:residence_since,0.502,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.003
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:age,0.571,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.141
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:existing_credits,0.525,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.050
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:num_dependents,0.501,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.002
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:checking_status=<0,0.626,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.251
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:checking_status=0<=X<200,0.558,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.116
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:checking_status=no checking,0.672,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.344
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:checking_status=>=200,0.512,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.023
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:credit_history=critical/other existing credit,0.59,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.180
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:credit_history=existing paid,0.524,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.048
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:credit_history=delayed previously,0.504,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.008
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:credit_history=no credits/all paid,0.531,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.062
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:credit_history=all paid,0.532,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.063
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:purpose=radio/tv,0.552,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.105
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:purpose=education,0.517,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.033
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:purpose=furniture/equipment,0.509,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.018
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:purpose=new car,0.545,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.090
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:purpose=used car,0.533,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.066
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:purpose=business,0.512,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.023
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:purpose=domestic appliance,0.501,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.002
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:purpose=repairs,0.503,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.007
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:purpose=other,0.503,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.007
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:purpose=retraining,0.504,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.008
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:savings_status=no known savings,0.555,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.109
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:savings_status=<100,0.586,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.172
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:savings_status=500<=X<1000,0.519,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.038
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:savings_status=>=1000,0.52,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.040
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:savings_status=100<=X<500,0.507,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.015
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:employment=>=7,0.528,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.057
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:employment=1<=X<4,0.505,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.011
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:employment=4<=X<7,0.531,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.063
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:employment=unemployed,0.51,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.021
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:employment=<1,0.544,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.088
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:personal_status=male single,0.544,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.088
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:personal_status=female div/dep/mar,0.538,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.076
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:personal_status=male div/sep,0.512,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.024
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:personal_status=male mar/wid,0.506,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.012
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:other_parties=none,0.5,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.000
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:other_parties=guarantor,0.513,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.027
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:other_parties=co applicant,0.514,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.027
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:property_magnitude=real estate,0.559,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.117
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:property_magnitude=life insurance,0.503,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.007
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:property_magnitude=no known property,0.55,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.099
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:property_magnitude=car,0.506,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.011
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:other_payment_plans=none,0.548,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.096
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:other_payment_plans=bank,0.536,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.073
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:other_payment_plans=stores,0.512,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.023
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:housing=own,0.566,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.133
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:housing=for free,0.528,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.055
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:housing=rent,0.539,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.078
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:job=skilled,0.507,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.014
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:job=unskilled resident,0.51,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.019
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:job=high qualif/self emp/mgmt,0.516,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.031
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:job=unemp/unskilled non res,0.501,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.002
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:own_telephone=yes,0.52,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.039
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:own_telephone=none,0.52,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.039
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:foreign_worker=yes,0.517,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.034
+M1.leakage,M1,german_credit_openml,single_feature_auc_dir:foreign_worker=no,0.517,"<0.85 pass, 0.85-0.95 conditional, >0.95 fail",pass,none,gini=0.034
