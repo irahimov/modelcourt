@@ -50,3 +50,12 @@ No threshold was changed.
 **Limitation kept:** no Bonferroni or Holm correction. A "conditional" bucket is a review item,
 not a model failure. Adding a correction would make the bucket test stricter; it is listed for
 discussion, not applied.
+
+## 2026-10 M3: result on holdout (read after thresholds were fixed)
+
+- Brier skill 0.25 (pass, threshold 0.05). Brier 0.157, base rate 0.300.
+- Overall binomial p = 0.95: mean predicted PD 0.3026 vs observed 0.300 (pass).
+- Buckets: 0 with p<0.05 (pass). Bucket 1 predicts 0.040, observes 0.083, p=0.089: the model
+  under-predicts risk in its lowest bucket. Not significant at 0.05, recorded for monitoring.
+- Reading: no calibration failure detected in a 300-row holdout. This is not evidence of
+  calibration in the population; the sample is too small to exclude moderate errors.
