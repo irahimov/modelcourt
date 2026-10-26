@@ -27,7 +27,7 @@ Notes:
 
 | Test | Pass | Conditional | Fail | Severity if fail |
 |------|------|-------------|------|------------------|
-| AUC (development sample) | >= 0.70 | 0.65 to 0.70 | < 0.65 | high |
+| AUC (holdout sample, 30%, decision basis) | >= 0.70 | 0.65 to 0.70 | < 0.65 | high |
 | Gini = 2*AUC - 1 | >= 0.40 | 0.30 to 0.40 | < 0.30 | high |
 | KS statistic | >= 0.25 | 0.20 to 0.25 | < 0.20 | medium |
 

@@ -22,3 +22,15 @@ istiqamətə görə AUC qərarı və “no checking” kateqoriyasının boşluq
 leakage threshold on directional AUC, max(AUC, 1-AUC). The measure was already used in the EDA
 notebook (cell 15) before the M1 run was scored. The text was made precise afterwards; the
 numbers 0.85 and 0.95 are unchanged.
+
+## 2026-10 M2: validation sample and model
+
+**Decided before any M2 result was computed.**
+
+- The validated object is a logistic regression baseline trained by this project on German Credit.
+  The validator does not rebuild a better model; it tests the one it is given.
+- Stratified 70/30 split, random_state=42. Model trained on 70%.
+- M2 decision thresholds apply to the 30% holdout. Development-sample AUC is reported only for
+  comparison, because in-sample AUC is optimistic.
+- Limitation: a single random split. Results depend on the split; the M4 stability and the
+  seed sensitivity check (planned) address this later.
