@@ -9,7 +9,7 @@ recorded in `docs/decisions.md` with the reason; they are not made silently.
 |------|------|-------------|------|------------------|
 | Missing rate per column | < 1% | 1% to 5% | > 5% | medium |
 | Duplicate rows | 0 | 1 to 10 | > 10 | low |
-| Single-feature AUC vs target (leakage heuristic) | < 0.85 | 0.85 to 0.95 | > 0.95 | critical |
+| Single-feature directional AUC, max(AUC, 1-AUC), vs target (leakage heuristic) | < 0.85 | 0.85 to 0.95 | > 0.95 | critical |
 | Category values outside expected set | 0 | 1 to 2 | > 2 | medium |
 | PSI, development vs new sample (per feature) | < 0.10 | 0.10 to 0.25 | > 0.25 | high |
 

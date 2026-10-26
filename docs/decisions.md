@@ -17,3 +17,8 @@ istiqamətə görə AUC qərarı və “no checking” kateqoriyasının boşluq
 **Alternatives:** leakage on pairs of features (not done; limitation of the single-feature heuristic); expected categories taken from the dataset description, not from the data itself, so the check cannot confirm its own reference.
 
 **Known limitation:** the single-feature heuristic misses leakage that only appears in a combination of features.
+
+**Clarification (documentation only, no threshold changed):** `docs/thresholds.md` now states the
+leakage threshold on directional AUC, max(AUC, 1-AUC). The measure was already used in the EDA
+notebook (cell 15) before the M1 run was scored. The text was made precise afterwards; the
+numbers 0.85 and 0.95 are unchanged.
