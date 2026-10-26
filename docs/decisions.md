@@ -34,3 +34,19 @@ numbers 0.85 and 0.95 are unchanged.
   comparison, because in-sample AUC is optimistic.
 - Limitation: a single random split. Results depend on the split; the M4 stability and the
   seed sensitivity check (planned) address this later.
+
+## 2026-10 M3: multiplicity in bucket tests
+
+**Found by a positive-control test, not by a result on German Credit.**
+The first version of the test expected a calibrated model to pass the bucket check every time.
+With 5 buckets and no multiplicity correction, one bucket reaches p<0.05 by chance in about 23%
+of calibrated samples. The threshold already allowed one conditional bucket; the test expectation
+was wrong, not the threshold.
+
+**Change:** the test now asserts (a) a calibrated model never FAILS on the bucket check, and
+(b) across 30 calibrated samples the FAIL rate is at most 0.15 (theory: about 0.02).
+No threshold was changed.
+
+**Limitation kept:** no Bonferroni or Holm correction. A "conditional" bucket is a review item,
+not a model failure. Adding a correction would make the bucket test stricter; it is listed for
+discussion, not applied.
