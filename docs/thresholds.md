@@ -22,3 +22,17 @@ Notes:
   any high fail or several conditional results means "conditional"; otherwise "pass".
 
 ## M2 to M4: to be written before those modules are computed.
+
+## M2: discrimination
+
+| Test | Pass | Conditional | Fail | Severity if fail |
+|------|------|-------------|------|------------------|
+| AUC (development sample) | >= 0.70 | 0.65 to 0.70 | < 0.65 | high |
+| Gini = 2*AUC - 1 | >= 0.40 | 0.30 to 0.40 | < 0.30 | high |
+| KS statistic | >= 0.25 | 0.20 to 0.25 | < 0.20 | medium |
+
+Notes:
+- These are working thresholds chosen by the author, not regulatory values.
+- A model with AUC below 0.5 is inverted, not weak. The validator reports the inversion as a finding; it is not silently flipped.
+- Gini and AUC are linked (Gini = 2*AUC - 1), so they do not count as two independent tests.
+- Thresholds are written before the M2 result is computed.
