@@ -1,0 +1,4 @@
+test_id,module,dataset,metric,value,threshold,decision,severity,note
+M3.brier_skill,M3,german_credit_openml,brier_skill_holdout,0.2506,">=0.05 pass, 0.00-0.05 conditional, <0.00 fail",pass,none,"Brier=0.1574, training base rate=0.300"
+M3.buckets,M3,german_credit_openml,buckets_p_below_005,0.0,"0 pass, 1 conditional, >=2 fail",pass,none,5 equal-count buckets; no multiplicity correction
+M3.overall,M3,german_credit_openml,overall_binomial_p,0.95,"p>=0.05 pass, p<0.05 fail",pass,none,observed 0.3 vs mean PD 0.3026
