@@ -36,3 +36,24 @@ Notes:
 - A model with AUC below 0.5 is inverted, not weak. The validator reports the inversion as a finding; it is not silently flipped.
 - Gini and AUC are linked (Gini = 2*AUC - 1), so they do not count as two independent tests.
 - Thresholds are written before the M2 result is computed.
+
+## M3: calibration
+
+Evaluated on the holdout sample only (same as M2).
+
+| Test | Pass | Conditional | Fail | Severity if fail |
+|------|------|-------------|------|------------------|
+| Brier skill score = 1 - Brier / Brier_null | >= 0.05 | 0.00 to 0.05 | < 0.00 | high |
+| Buckets with binomial p < 0.05 (5 equal-count buckets) | 0 | 1 | >= 2 | high |
+| Overall binomial test: observed defaults vs sum of predicted PD | p >= 0.05 | - | p < 0.05 | high |
+
+Notes:
+- Brier_null is the Brier score of a constant prediction equal to the training default rate.
+  Skill > 0 means the model beats a constant guess.
+- Buckets are equal-count quintiles of the predicted score (ranked, so ties do not change bucket sizes).
+  Each bucket is tested with a two-sided binomial test against its mean predicted PD.
+- No multiple-testing correction is applied across the 5 buckets. A "conditional" result is a
+  review item, not a model failure by itself.
+- The 0.05 Brier skill cut-off is a working threshold chosen by the author, not a regulatory value.
+- A plain gap threshold (e.g. |mean PD - observed| < 0.02) was considered and rejected: the standard
+  error of the observed rate on 300 rows is about 0.026, so such a threshold would reflect sampling noise.
