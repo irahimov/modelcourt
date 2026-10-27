@@ -157,3 +157,16 @@ Reading:
 
 Stop rules (`reports/stop_rules.csv`) are evaluated against the validation summary. Current action: continue.
 See `docs/case_playbook.md` for how these results would be used in a case discussion.
+
+## Scope
+
+What this project does: validates a probability-of-default score on a public credit dataset with
+data-quality checks (M1), discrimination (M2), calibration (M3), stability (M4), a challenger comparison
+(M6), a decision policy with stop rules (M9), a seed-sensitivity check, and a summary report (M8).
+
+What it does not do: time-based backtesting (no dates), IFRS 9 / ECL (no LGD or EAD), fairness testing,
+reject inference, production monitoring, or explainability. Each is listed with the data or policy
+it would need in `docs/future_work.md`.
+
+The thresholds, the loss multiples and the stop rules are working assumptions written before results.
+They are not regulatory values. Public data is used throughout; nothing here validates a bank portfolio.
