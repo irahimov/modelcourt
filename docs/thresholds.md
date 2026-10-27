@@ -75,3 +75,24 @@ Notes:
   not evidence of stability over time. The positive control is what shows the method can see a shift.
 - A method whose positive control is not detected cannot support a pass on the real tests.
 - PSI bands 0.10 and 0.25 are industry practice, not regulatory requirements.
+
+## M5: backtesting
+
+Not performed. German Credit has no date column. A split by row order is not a time test,
+so M5 is recorded as "not applicable" with the reason. It is not reported as a pass.
+A real out-of-time test needs a dataset with dates (see docs/future_work.md).
+
+## M6: challenger
+
+Metric: AUC(challenger) - AUC(baseline) on the holdout, with a paired bootstrap interval.
+Challenger: LightGBM on the same training rows and features.
+
+| Test | Pass | Conditional | Fail | Severity if fail |
+|------|------|-------------|------|------------------|
+| AUC difference, challenger minus baseline (point estimate) | < 0.02 | 0.02 to 0.05 | > 0.05 | high |
+
+Notes:
+- A large positive difference means the baseline is materially weaker than a standard alternative.
+  That is a finding on the baseline, and the decision is to revisit it, not to switch silently.
+- A negative difference (baseline better) is a pass.
+- The 0.02 and 0.05 bands are working thresholds chosen by the author.
