@@ -1,0 +1,1107 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>ModelCourt validation report: German Credit baseline</title>
+<style>body{font-family:sans-serif;max-width:1100px;margin:2em auto;padding:0 1em}
+table{border-collapse:collapse;font-size:13px}th,td{border-bottom:1px solid #ddd;padding:6px;text-align:left}
+.big{font-size:20px;font-weight:600}</style></head><body>
+<h1>ModelCourt validation report: German Credit baseline</h1>
+<p class="big">Overall decision: pass</p>
+<p>Counts: {'pass': 97, 'n/a': 1}. Tests marked n/a are not performed and are not counted.</p>
+<p>Thresholds were written before results (docs/thresholds.md). Limitations are in README.md
+and docs/decisions.md. The data is public (German Credit, 1000 rows, no dates), so this report
+does not validate any bank portfolio.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>test_id</th>
+      <th>module</th>
+      <th>dataset</th>
+      <th>metric</th>
+      <th>value</th>
+      <th>threshold</th>
+      <th>decision</th>
+      <th>severity</th>
+      <th>note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:checking_status</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:duration</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:credit_history</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:purpose</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:credit_amount</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:savings_status</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:employment</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:installment_commitment</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:personal_status</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:other_parties</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:residence_since</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:property_magnitude</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:age</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:other_payment_plans</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:housing</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:existing_credits</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:job</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:num_dependents</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:own_telephone</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:foreign_worker</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.missing</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>missing_pct:class</td>
+      <td>0.0</td>
+      <td>&lt;1 pass, 1-5 conditional, &gt;5 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.duplicates</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>duplicate_rows</td>
+      <td>0.0</td>
+      <td>0 pass, 1-10 conditional, &gt;10 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.categories</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>unexpected_values:checking_status</td>
+      <td>0.0</td>
+      <td>0 pass, 1-2 conditional, &gt;2 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.categories</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>unexpected_values:credit_history</td>
+      <td>0.0</td>
+      <td>0 pass, 1-2 conditional, &gt;2 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.categories</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>unexpected_values:savings_status</td>
+      <td>0.0</td>
+      <td>0 pass, 1-2 conditional, &gt;2 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:duration</td>
+      <td>0.629</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.257</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:credit_amount</td>
+      <td>0.555</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.110</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:installment_commitment</td>
+      <td>0.543</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.087</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:residence_since</td>
+      <td>0.502</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.003</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:age</td>
+      <td>0.571</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.141</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:existing_credits</td>
+      <td>0.525</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.050</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:num_dependents</td>
+      <td>0.501</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.002</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:checking_status=&lt;0</td>
+      <td>0.626</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.251</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:checking_status=0&lt;=X&lt;200</td>
+      <td>0.558</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.116</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:checking_status=no checking</td>
+      <td>0.672</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.344</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:checking_status=&gt;=200</td>
+      <td>0.512</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.023</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:credit_history=critical/other existing credit</td>
+      <td>0.59</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.180</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:credit_history=existing paid</td>
+      <td>0.524</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.048</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:credit_history=delayed previously</td>
+      <td>0.504</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.008</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:credit_history=no credits/all paid</td>
+      <td>0.531</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.062</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:credit_history=all paid</td>
+      <td>0.532</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.063</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:purpose=radio/tv</td>
+      <td>0.552</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.105</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:purpose=education</td>
+      <td>0.517</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.033</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:purpose=furniture/equipment</td>
+      <td>0.509</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.018</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:purpose=new car</td>
+      <td>0.545</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.090</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:purpose=used car</td>
+      <td>0.533</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.066</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:purpose=business</td>
+      <td>0.512</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.023</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:purpose=domestic appliance</td>
+      <td>0.501</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.002</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:purpose=repairs</td>
+      <td>0.503</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.007</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:purpose=other</td>
+      <td>0.503</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.007</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:purpose=retraining</td>
+      <td>0.504</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.008</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:savings_status=no known savings</td>
+      <td>0.555</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.109</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:savings_status=&lt;100</td>
+      <td>0.586</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.172</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:savings_status=500&lt;=X&lt;1000</td>
+      <td>0.519</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.038</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:savings_status=&gt;=1000</td>
+      <td>0.52</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.040</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:savings_status=100&lt;=X&lt;500</td>
+      <td>0.507</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.015</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:employment=&gt;=7</td>
+      <td>0.528</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.057</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:employment=1&lt;=X&lt;4</td>
+      <td>0.505</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.011</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:employment=4&lt;=X&lt;7</td>
+      <td>0.531</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.063</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:employment=unemployed</td>
+      <td>0.51</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.021</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:employment=&lt;1</td>
+      <td>0.544</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.088</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:personal_status=male single</td>
+      <td>0.544</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.088</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:personal_status=female div/dep/mar</td>
+      <td>0.538</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.076</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:personal_status=male div/sep</td>
+      <td>0.512</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.024</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:personal_status=male mar/wid</td>
+      <td>0.506</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.012</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:other_parties=none</td>
+      <td>0.5</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.000</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:other_parties=guarantor</td>
+      <td>0.513</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.027</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:other_parties=co applicant</td>
+      <td>0.514</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.027</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:property_magnitude=real estate</td>
+      <td>0.559</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.117</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:property_magnitude=life insurance</td>
+      <td>0.503</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.007</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:property_magnitude=no known property</td>
+      <td>0.55</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.099</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:property_magnitude=car</td>
+      <td>0.506</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.011</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:other_payment_plans=none</td>
+      <td>0.548</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.096</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:other_payment_plans=bank</td>
+      <td>0.536</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.073</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:other_payment_plans=stores</td>
+      <td>0.512</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.023</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:housing=own</td>
+      <td>0.566</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.133</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:housing=for free</td>
+      <td>0.528</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.055</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:housing=rent</td>
+      <td>0.539</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.078</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:job=skilled</td>
+      <td>0.507</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.014</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:job=unskilled resident</td>
+      <td>0.51</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.019</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:job=high qualif/self emp/mgmt</td>
+      <td>0.516</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.031</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:job=unemp/unskilled non res</td>
+      <td>0.501</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.002</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:own_telephone=yes</td>
+      <td>0.52</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.039</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:own_telephone=none</td>
+      <td>0.52</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.039</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:foreign_worker=yes</td>
+      <td>0.517</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.034</td>
+    </tr>
+    <tr>
+      <td>M1.leakage</td>
+      <td>M1</td>
+      <td>german_credit_openml</td>
+      <td>single_feature_auc_dir:foreign_worker=no</td>
+      <td>0.517</td>
+      <td>&lt;0.85 pass, 0.85-0.95 conditional, &gt;0.95 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>gini=0.034</td>
+    </tr>
+    <tr>
+      <td>M2.auc</td>
+      <td>M2</td>
+      <td>german_credit_openml</td>
+      <td>auc_holdout</td>
+      <td>0.801</td>
+      <td>&gt;=0.70 pass, 0.65-0.70 conditional, &lt;0.65 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>bootstrap 95% CI [0.743, 0.855], 2000 valid resamples.</td>
+    </tr>
+    <tr>
+      <td>M2.gini</td>
+      <td>M2</td>
+      <td>german_credit_openml</td>
+      <td>gini_holdout</td>
+      <td>0.602</td>
+      <td>&gt;=0.40 pass, 0.30-0.40 conditional, &lt;0.30 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>Gini = 2*AUC-1; not an independent test of AUC.</td>
+    </tr>
+    <tr>
+      <td>M2.ks</td>
+      <td>M2</td>
+      <td>german_credit_openml</td>
+      <td>ks_holdout</td>
+      <td>0.494</td>
+      <td>&gt;=0.25 pass, 0.20-0.25 conditional, &lt;0.20 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M3.brier_skill</td>
+      <td>M3</td>
+      <td>german_credit_openml</td>
+      <td>brier_skill_holdout</td>
+      <td>0.2506</td>
+      <td>&gt;=0.05 pass, 0.00-0.05 conditional, &lt;0.00 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>Brier=0.1574, training base rate=0.300</td>
+    </tr>
+    <tr>
+      <td>M3.buckets</td>
+      <td>M3</td>
+      <td>german_credit_openml</td>
+      <td>buckets_p_below_005</td>
+      <td>0.0</td>
+      <td>0 pass, 1 conditional, &gt;=2 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>5 equal-count buckets; no multiplicity correction</td>
+    </tr>
+    <tr>
+      <td>M3.overall</td>
+      <td>M3</td>
+      <td>german_credit_openml</td>
+      <td>overall_binomial_p</td>
+      <td>0.95</td>
+      <td>p&gt;=0.05 pass, p&lt;0.05 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>observed 0.3 vs mean PD 0.3026</td>
+    </tr>
+    <tr>
+      <td>M4.score_psi</td>
+      <td>M4</td>
+      <td>german_credit_openml</td>
+      <td>psi_score</td>
+      <td>0.0285</td>
+      <td>&lt;0.10 pass, 0.10-0.25 conditional, &gt;0.25 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M4.csi</td>
+      <td>M4</td>
+      <td>german_credit_openml</td>
+      <td>features_csi_not_pass</td>
+      <td>0.0</td>
+      <td>0 pass, 1-2 conditional, &gt;2 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>worst feature: age (CSI=0.0641)</td>
+    </tr>
+    <tr>
+      <td>M4.consistency</td>
+      <td>M4</td>
+      <td>german_credit_openml</td>
+      <td>max_abs_diff_pandas_vs_sql</td>
+      <td>0.0</td>
+      <td>&lt;1e-9 pass, &gt;=1e-9 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>M4.control</td>
+      <td>M4</td>
+      <td>german_credit_openml</td>
+      <td>psi_control_credit_amount_x1.5</td>
+      <td>0.3874</td>
+      <td>detected (PSI&gt;0.25) = pass, not detected = fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>positive control: the method must see a known shift</td>
+    </tr>
+    <tr>
+      <td>M6.challenger_auc_diff</td>
+      <td>M6</td>
+      <td>german_credit_openml</td>
+      <td>auc_challenger_minus_baseline</td>
+      <td>-0.0205</td>
+      <td>&lt;0.02 pass, 0.02-0.05 conditional, &gt;0.05 fail</td>
+      <td>pass</td>
+      <td>none</td>
+      <td>paired bootstrap 95% CI [-0.055, 0.014]</td>
+    </tr>
+    <tr>
+      <td>M5.backtest</td>
+      <td>M5</td>
+      <td>german_credit_openml</td>
+      <td>not_applicable</td>
+      <td>None</td>
+      <td>-</td>
+      <td>n/a</td>
+      <td>none</td>
+      <td>no date column in German Credit; time-based backtest not possible</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>

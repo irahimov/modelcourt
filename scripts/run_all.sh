@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
-# One-command demo. Steps are added as modules M1 to M8 are implemented.
+# One-command reproduction. Requires the fin-env environment and data/raw/ populated.
 set -euo pipefail
-echo "ModelCourt: no validation steps implemented yet."
+cd "$(dirname "$0")/.."
+python scripts/fetch_data.py
+python scripts/train_baseline.py
+python scripts/run_m1.py
+python scripts/run_m2.py
+python scripts/run_m3.py
+python scripts/run_m4.py
+python scripts/run_m6.py
+python scripts/run_m8.py

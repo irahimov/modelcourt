@@ -1,0 +1,2 @@
+test_id,module,dataset,metric,value,threshold,decision,severity,note
+M6.challenger_auc_diff,M6,german_credit_openml,auc_challenger_minus_baseline,-0.0205,"<0.02 pass, 0.02-0.05 conditional, >0.05 fail",pass,none,"paired bootstrap 95% CI [-0.055, 0.014]"
