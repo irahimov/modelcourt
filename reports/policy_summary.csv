@@ -1,0 +1,4 @@
+loss_multiple,cutoff,approval_rate,bad_rate_among_approved,profit_per_applicant,approve_all_profit_per_applicant,incremental_per_applicant,incremental_ci_low,incremental_ci_high
+3.0,0.25,0.5267,0.1076,0.3,-0.2,0.5,0.3367,0.6667
+5.0,0.1667,0.4067,0.0902,0.1867,-0.8,0.9867,0.7133,1.2601
+8.0,0.1111,0.28,0.1071,0.01,-1.7,1.71,1.2867,2.1501

@@ -10,3 +10,4 @@ python scripts/run_m3.py
 python scripts/run_m4.py
 python scripts/run_m6.py
 python scripts/run_m8.py
+python scripts/run_policy.py
