@@ -4,7 +4,7 @@ Independent validation of credit and customer models: data quality, discriminati
 calibration, stability (PSI/CSI), backtesting, challenger comparison, a small IFRS 9
 ECL example, and an automated validation report.
 
-**Status:** skeleton only. Modules are being implemented one by one (M1 to M8).
+**Status:** first version complete (M1 to M4, M6, M8). M5 is not applicable (no dates). Open items: seed sensitivity, M7, bank-data version.
 
 ## Problem
 
@@ -87,3 +87,51 @@ scripts/          one-command entry points
 | 5 | M8 report, `run_all.sh`, final README numbers | planned |
 
 M7 (IFRS 9 ECL illustration) is out of scope for the first version. See `docs/future_work.md`.
+
+## Results (first version)
+
+All numbers are from `reports/validation_summary.csv`. Thresholds were written before
+results (`docs/thresholds.md`). Overall decision: **pass**.
+
+Model: logistic regression baseline, trained on a stratified 70% split of German Credit
+(OpenML `credit-g`, 1000 rows, 30% default). All tests below use the 300-row holdout unless stated.
+
+| Module | Test | Value | Decision |
+|--------|------|-------|----------|
+| M1 | Missing rate, duplicates, unexpected categories | 0%, 0, 0 | pass (86 checks, all pass) |
+| M1 | Single-feature directional AUC (max) | 0.672 (`checking_status = no checking`) | pass (threshold 0.85) |
+| M2 | AUC | 0.801, 95% bootstrap CI [0.743, 0.855] | pass |
+| M2 | Gini | 0.602 | pass |
+| M2 | KS | 0.494 | pass |
+| M3 | Brier skill | 0.251 | pass |
+| M3 | Buckets with binomial p < 0.05 | 0 (lowest bucket p = 0.089) | pass |
+| M3 | Overall binomial p | 0.95 | pass |
+| M4 | Score PSI (train vs holdout) | 0.029 | pass |
+| M4 | Max CSI (`age`) | 0.064 | pass |
+| M4 | pandas vs SQL max difference | 6.9e-18 | pass |
+| M4 | Positive control (credit_amount x1.5), PSI | 0.387 (detected) | pass |
+| M5 | Backtest | not applicable: no date column | n/a |
+| M6 | AUC difference, LightGBM minus baseline | -0.021, 95% CI [-0.055, 0.014] | pass |
+
+### How to read these results
+
+- **M4 PSI and CSI are a null result.** Train and holdout come from the same random split of
+  one population. Low PSI shows the split is balanced, not that the model is stable over time.
+- **M4 control shows the method can see a shift of that size.** It does not show it would see
+  a smaller shift.
+- **M3 pass means no error was detected in 300 rows.** It does not show the model is calibrated
+  in the population. Bucket 1 under-predicts risk (0.040 predicted, 0.083 observed, p = 0.089),
+  recorded for monitoring.
+- **M6 interval is wide.** The challenger is neither clearly better nor clearly worse on this
+  sample. The upper bound (0.014) is below the conditional band (0.02), so the test cannot fail
+  in either direction.
+- **M5 is not performed.** Time-based backtesting needs a dataset with dates.
+
+### Limitations
+
+- Public data (German Credit, 1990s German consumer loans). Not a bank portfolio.
+- One random 70/30 split, one seed (42). Sensitivity to the split is not yet measured.
+- Thresholds are working values chosen by the author, not regulatory requirements.
+- Single-feature leakage heuristic. Leakage that appears only in a combination of features
+  is not detected.
+- No time stamps, so no out-of-time validation.
