@@ -59,3 +59,14 @@ discussion, not applied.
   under-predicts risk in its lowest bucket. Not significant at 0.05, recorded for monitoring.
 - Reading: no calibration failure detected in a 300-row holdout. This is not evidence of
   calibration in the population; the sample is too small to exclude moderate errors.
+
+## 2026-10 M4: stability
+
+- Bin edges from the training sample only, computed once. Holdout does not change them.
+- Every PSI computed in pandas and in DuckDB SQL. Max difference 6.9e-18 (consistency pass).
+- Score PSI 0.029 and CSI max 0.064 (age): both pass. These compare two random parts of the
+  same population, so they are a null result. They do not show stability over time.
+- Positive control: credit_amount x1.5 on holdout gives PSI 0.387, detected. This shows the
+  method can see a shift of that size. It does not show it would see a smaller one.
+- Open: seed sensitivity of the 70/30 split is not yet measured. Planned as a sensitivity
+  check, not as a pass/fail module.
