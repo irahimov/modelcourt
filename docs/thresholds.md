@@ -125,3 +125,15 @@ Stop rules (checked against validation_summary.csv):
 Notes:
 - Cut-offs are not tuned on the holdout. The rule is the break-even rule under an assumed L.
 - Stop rules are a monitoring policy written for this project. They are not regulatory triggers.
+
+## Seed sensitivity (30 seeds, same pipeline as the baseline)
+
+| Test | Pass | Conditional | Fail |
+|------|------|-------------|------|
+| Minimum holdout AUC across seeds | >= 0.70 | 0.65 to 0.70 | < 0.65 |
+| Share of seeds where M9 incremental value at L=5 is > 0 | >= 90% | 70% to 90% | < 70% |
+| Share of seeds with 2 or more buckets at binomial p < 0.05 | <= 5% | 5% to 15% | > 15% |
+
+Notes:
+- Seed 42 is the control. It must reproduce the baseline AUC of 0.801, otherwise the script is wrong.
+- These thresholds are fixed before the 30-seed run. The run does not change them.
