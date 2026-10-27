@@ -70,3 +70,12 @@ discussion, not applied.
   method can see a shift of that size. It does not show it would see a smaller one.
 - Open: seed sensitivity of the 70/30 split is not yet measured. Planned as a sensitivity
   check, not as a pass/fail module.
+
+## 2026-10 Seed sensitivity: result (thresholds fixed before the run)
+
+- Control seed 42 reproduces the baseline AUC 0.801.
+- Minimum holdout AUC over 30 seeds: 0.735 (pass, threshold 0.70). Mean 0.785, max 0.826.
+- M9 incremental value at L=5 is positive in 30 of 30 seeds (pass). Mean +0.96, minimum +0.82.
+- Seeds with 2 or more buckets at binomial p < 0.05: 2 of 30 (7%). Conditional (band 5% to 15%).
+  Threshold not changed after seeing the result.
+- Reading: discrimination and the policy conclusion hold across splits. Bucket-level calibration does not.
