@@ -135,3 +135,25 @@ Model: logistic regression baseline, trained on a stratified 70% split of German
 - Single-feature leakage heuristic. Leakage that appears only in a combination of features
   is not detected.
 - No time stamps, so no out-of-time validation.
+
+## Decision policy (M9, illustrative)
+
+Policy: approve an applicant when the predicted PD is below the break-even cutoff 1/(1+L).
+L is the loss multiple of a bad approval relative to a good one. It is an assumption of this
+project, not a bank parameter. Results on the 300-row holdout, compared with approving everyone:
+
+| L | Cutoff | Approval rate | Bad rate among approved | Incremental per applicant | 95% CI |
+|---|--------|---------------|-------------------------|---------------------------|--------|
+| 3 | 0.250 | 52.7% | 10.8% | +0.50 | [0.34, 0.67] |
+| 5 | 0.167 | 40.7% | 9.0% | +0.99 | [0.71, 1.26] |
+| 8 | 0.111 | 28.0% | 10.7% | +1.71 | [1.29, 2.15] |
+
+Reading:
+- The interval excludes zero for every L on this holdout, so the policy beats approve-all here.
+- Approve-all is not a bank policy. The comparison is a reference point, not a claim of
+  improvement over current practice, which this project does not have.
+- Cutoffs are not tuned on the holdout. The sweep in `reports/policy_curve.csv` is for sensitivity only.
+- The interval reflects holdout sampling only. It does not cover the choice of L, the split, or the seed.
+
+Stop rules (`reports/stop_rules.csv`) are evaluated against the validation summary. Current action: continue.
+See `docs/case_playbook.md` for how these results would be used in a case discussion.
