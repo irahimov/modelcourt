@@ -91,7 +91,7 @@ M7 (IFRS 9 ECL illustration) is out of scope for the first version. See `docs/fu
 ## Results (first version)
 
 All numbers are from `reports/validation_summary.csv`. Thresholds were written before
-results (`docs/thresholds.md`). Overall decision: **pass**.
+results (`docs/thresholds.md`). Overall decision on the main split: **pass**. The seed-sensitivity check moves the bucket-level calibration test (M3) to **conditional**; see the seed section below.
 
 Model: logistic regression baseline, trained on a stratified 70% split of German Credit
 (OpenML `credit-g`, 1000 rows, 30% default). All tests below use the 300-row holdout unless stated.
@@ -103,8 +103,8 @@ Model: logistic regression baseline, trained on a stratified 70% split of German
 | M2 | AUC | 0.801, 95% bootstrap CI [0.743, 0.855] | pass |
 | M2 | Gini | 0.602 | pass |
 | M2 | KS | 0.494 | pass |
-| M3 | Brier skill | 0.251 | pass |
-| M3 | Buckets with binomial p < 0.05 | 0 (lowest bucket p = 0.089) | pass |
+| M3 | Brier skill | 0.251 | pass (single split); mean 0.21 across 30 seeds |
+| M3 | Buckets with binomial p < 0.05 | 0 on the main split (lowest p = 0.089); 2 or more in 2 of 30 seeds | pass on main split, **conditional across seeds** |
 | M3 | Overall binomial p | 0.95 | pass |
 | M4 | Score PSI (train vs holdout) | 0.029 | pass |
 | M4 | Max CSI (`age`) | 0.064 | pass |
@@ -170,3 +170,21 @@ it would need in `docs/future_work.md`.
 
 The thresholds, the loss multiples and the stop rules are working assumptions written before results.
 They are not regulatory values. Public data is used throughout; nothing here validates a bank portfolio.
+
+## Final status (first version)
+
+**Done:** data-quality checks (M1), discrimination (M2), calibration (M3), stability (M4),
+challenger comparison (M6), decision policy with stop rules (M9), seed sensitivity (30 seeds),
+summary report (M8). 54 tests. Reproducible from a clean clone with `scripts/run_all.sh`.
+
+**Not done, and why:**
+- M5 (time-based backtest): the data has no dates.
+- M7 (IFRS 9 / ECL): no LGD or EAD in the data.
+- Fairness by sex and age: not tested. It needs a protected-attribute policy and group-level
+  thresholds that this project cannot set. Out-of-fold scores over all 1000 rows would be the
+  basis for a future test.
+- Reject inference: no data on rejected applicants.
+- Monitoring, explainability, model inventory and governance: out of scope for a prototype.
+
+**Not claimed:** that the model works on a bank portfolio, is stable over time, or is fair.
+The thresholds, loss multiples and stop rules are working assumptions written before results.
