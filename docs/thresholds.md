@@ -96,3 +96,32 @@ Notes:
   That is a finding on the baseline, and the decision is to revisit it, not to switch silently.
 - A negative difference (baseline better) is a pass.
 - The 0.02 and 0.05 bands are working thresholds chosen by the author.
+
+## M9: decision policy (written before any policy result is computed)
+
+Economics per applicant (units arbitrary):
+- approve a good customer: +1
+- approve a bad customer: -L
+- reject: 0
+
+Break-even rule: approve when PD < 1 / (1 + L).
+
+Loss multiple L is a case assumption, not a bank parameter. Evaluated for L in {3, 5, 8}.
+Sensitivity across L is reported; no single L is presented as correct.
+
+Evaluation: realized profit on the 300-row holdout, compared with approving everyone.
+Uncertainty: paired bootstrap interval for the incremental profit per applicant.
+
+Stop rules (checked against validation_summary.csv):
+| Rule | Condition | Action |
+|------|-----------|--------|
+| R1 | any critical fail | stop |
+| R2 | score PSI > 0.25 | stop |
+| R3 | score PSI in 0.10 to 0.25 | review |
+| R4 | bucket calibration fail, or Brier skill < 0 | stop |
+| R5 | holdout AUC < 0.65 | stop |
+| - | none of the above | continue |
+
+Notes:
+- Cut-offs are not tuned on the holdout. The rule is the break-even rule under an assumed L.
+- Stop rules are a monitoring policy written for this project. They are not regulatory triggers.
