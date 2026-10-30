@@ -40,7 +40,7 @@ uv pip install -e ".[dev]"
 pytest
 ```
 
-One-command demo (to be added after M1 to M3):
+One-command run (all modules):
 
 ```bash
 bash scripts/run_all.sh
@@ -80,11 +80,11 @@ scripts/          one-command entry points
 | Phase | Content | Status |
 |-------|---------|--------|
 | 0 | Environment, skeleton, CI-free local tests | done |
-| 1 | Data description, thresholds, decision log | in progress |
-| 2 | M1 data quality, M2 discrimination | planned |
-| 3 | M3 calibration, M4 PSI (pandas and SQL) | planned |
-| 4 | M5 pseudo out-of-time, M6 challenger | planned |
-| 5 | M8 report, `run_all.sh`, final README numbers | planned |
+| 1 | Data description, thresholds, decision log | done |
+| 2 | M1 data quality, M2 discrimination | done |
+| 3 | M3 calibration, M4 PSI (pandas and SQL) | done |
+| 4 | M5 pseudo out-of-time, M6 challenger | done |
+| 5 | M8 report, `run_all.sh`, final README numbers | done |
 
 M7 (IFRS 9 ECL illustration) is out of scope for the first version. See `docs/future_work.md`.
 
